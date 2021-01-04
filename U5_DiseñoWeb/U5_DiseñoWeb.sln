@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoramaAPI", "MemoramaAPI\MemoramaAPI.csproj", "{9C4DE151-7B27-41D0-8779-73AA5671B24E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoramaAPIWeb", "MemoramaAPIWeb\MemoramaAPIWeb.csproj", "{01889C85-7A2E-4CBB-A9DB-2B065A197DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoramaAPIMovil.Android", "MemoramaAPIMovil\MemoramaAPIMovil.Android\MemoramaAPIMovil.Android.csproj", "{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoramaAPIMovil", "MemoramaAPIMovil\MemoramaAPIMovil\MemoramaAPIMovil.csproj", "{F090D01A-F278-4B8A-9A0B-D9CA384CE097}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoramaAPIEscritorio", "MemoramaAPIEscritorio\MemoramaAPIEscritorio.csproj", "{0D7AE57E-206B-4A9C-8015-DC0ABE0FA145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C4DE151-7B27-41D0-8779-73AA5671B24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C4DE151-7B27-41D0-8779-73AA5671B24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C4DE151-7B27-41D0-8779-73AA5671B24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C4DE151-7B27-41D0-8779-73AA5671B24E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FA1ABA8-729F-4DC6-AF30-C2AE7B8DDD00}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F090D01A-F278-4B8A-9A0B-D9CA384CE097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F090D01A-F278-4B8A-9A0B-D9CA384CE097}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F090D01A-F278-4B8A-9A0B-D9CA384CE097}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F090D01A-F278-4B8A-9A0B-D9CA384CE097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01889C85-7A2E-4CBB-A9DB-2B065A197DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01889C85-7A2E-4CBB-A9DB-2B065A197DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01889C85-7A2E-4CBB-A9DB-2B065A197DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01889C85-7A2E-4CBB-A9DB-2B065A197DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7AE57E-206B-4A9C-8015-DC0ABE0FA145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7AE57E-206B-4A9C-8015-DC0ABE0FA145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7AE57E-206B-4A9C-8015-DC0ABE0FA145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7AE57E-206B-4A9C-8015-DC0ABE0FA145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
