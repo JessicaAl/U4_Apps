@@ -1,13 +1,13 @@
-﻿
+﻿@model MemoramaAPIWeb.Models.ViewModels.MemoViewModel
 <h1>PokeMemo</h1>
 <input type="button" value="Iniciar juego" id="iniciar" />
 <table>
-    @*  @if (true)*@
-
+    @if (Model.poke1.isSelected==true)
+    {
     <tbody>
         <tr>
             <td>
-                <img />
+                <img src="~/images/@Model.poke1.idPoke" />
             </td>
             <td>
                 <img />
@@ -48,7 +48,7 @@
             </td>
         </tr>
     </tbody>
-
+    }
 
 
 </table>

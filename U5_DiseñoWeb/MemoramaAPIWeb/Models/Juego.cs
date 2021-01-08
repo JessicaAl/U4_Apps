@@ -11,5 +11,7 @@ namespace MemoramaAPIWeb.Models
         public string nomPoke { get; set; }
         public string Foto { get; set; }
         public string reversoCarta { get; set; }
+
+        public bool isSelected { get; set; }
     }
 }

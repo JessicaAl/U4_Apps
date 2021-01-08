@@ -26,7 +26,7 @@ namespace MemoramaAPIWeb.Controllers
             return View();
         }
 
-        public int IdPokeRandom()
+        public int IdRandom()
         {
             Random r = new Random();
             int rId = r.Next(1, 7);
@@ -36,21 +36,27 @@ namespace MemoramaAPIWeb.Controllers
         {
 
             var i = 0;
-            while (i < 6)
+            while (i < 7)
             {
-                var id = IdPokeRandom();
+                var id = IdRandom();
                 client = Factory.CreateClient("Pokemones");
-                var response = await client.GetAsync($"api/v2/pokemon/{id}");
+                var response = await client.GetAsync($"api/v2/pokemon?limit={id}");
 
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
                     var des = JsonConvert.DeserializeObject<Pokemon>(json);
                     lstPokemon.Add(des);
-
                     i++;
                 }
             }
+
+
+
+
+
+
+
             return lstPokemon;
         }
 

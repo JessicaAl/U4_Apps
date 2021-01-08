@@ -15,5 +15,7 @@ namespace MemoramaAPIWeb.Models.ViewModels
         public Juego poke4 { get; set; } = new Juego();
         public Juego poke5 { get; set; } = new Juego();
         public Juego poke6 { get; set; } = new Juego();
+
+        
     }
 }
