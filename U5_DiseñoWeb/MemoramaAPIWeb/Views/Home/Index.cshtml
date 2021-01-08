@@ -1,54 +1,70 @@
 ﻿@model MemoramaAPIWeb.Models.ViewModels.MemoViewModel
-<h1>PokeMemo</h1>
-<input type="button" value="Iniciar juego" id="iniciar" />
-<table>
-    @if (Model.poke1.isSelected==true)
-    {
-    <tbody>
-        <tr>
-            <td>
-                <img src="~/images/@Model.poke1.idPoke" />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-            <td>
-                <img />
-            </td>
-        </tr>
-    </tbody>
-    }
+
+    <!DOCTYPE html>
+    <html lang="es-mx">
+    <head>
+        <meta charset="utf-8" />
+        <link href="diseño.css" rel="stylesheet" />
+        <title>Memorama</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <main>
+        <h1>PokeMemo</h1>
+        <input type="button" value="Iniciar juego" id="iniciar" />
+        <table>
+            @if (Model.poke1.isSelected==true)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="@Model.poke1.Foto" />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                        <td>
+                            <img />
+                        </td>
+                    </tr>
+                </tbody>
+            }
 
 
-</table>
+        </table>
+
+        </main>
+    </body>
+
+</html>

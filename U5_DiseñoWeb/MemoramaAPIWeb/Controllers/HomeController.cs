@@ -26,19 +26,12 @@ namespace MemoramaAPIWeb.Controllers
             return View();
         }
 
-        public int IdRandom()
+        private async Task<List<Pokemon>> GetListPokemon()
         {
             Random r = new Random();
             int rId = r.Next(1, 7);
-            return rId;
-        }
-        private async Task<List<Pokemon>> GetListPokemon()
-        {
-
             var i = 0;
-            while (i < 7)
-            {
-                var id = IdRandom();
+                var id = rId;
                 client = Factory.CreateClient("Pokemones");
                 var response = await client.GetAsync($"api/v2/pokemon?limit={id}");
 
@@ -49,21 +42,39 @@ namespace MemoramaAPIWeb.Controllers
                     lstPokemon.Add(des);
                     i++;
                 }
+            return lstPokemon;
+        }
+
+        public List<Juego> ListaCartas { get; set; } = new List<Juego>();
+
+        public async Task<IActionResult> Memorama()
+        {
+            MemoViewModel mvm = new MemoViewModel();
+            mvm.ListaPokemones = await GetListPokemon();
+
+            Random r = new Random();
+            int[] idsPoke = new int[12] { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 };
+
+            for (int i = 0; i <= 11; i++)
+            {
+                var p = r.Next(0, 12);
+                var q = idsPoke[i];
+                idsPoke[i] = idsPoke[p];
+                idsPoke[p] = q;
+            }
+
+            for (int i = 0; i <= idsPoke.Length; i++)
+            {
+                mvm.poke1.Foto = $"~/images/{idsPoke[i]}.jpg";
+                mvm.poke1.idPoke = idsPoke[i];
+                mvm.poke1.isSelected = false;
+                mvm.poke1.reversoCarta = "~/images/reversoCarta.jpg";
             }
 
 
 
 
 
-
-
-            return lstPokemon;
-        }
-
-        public async Task<IActionResult> Memorama()
-        {
-            MemoViewModel mvm = new MemoViewModel();
-            mvm.ListaPokemones = await GetListPokemon();
 
             return View("Index");
         }
