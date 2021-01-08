@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MemoramaAPIEscritorio"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
+    <!--<StackPanel>
         <TextBlock>Memorama de Pokemones</TextBlock>
         <Button Width="100" Height="20">Iniciar</Button>
         <Grid Margin="10">
@@ -25,5 +25,5 @@
             <TextBlock Grid.Row="1">Pokemon 1</TextBlock>
             <TextBlock Grid.Row="2">Pokemon 1</TextBlock>
         </Grid>
-    </StackPanel>
+    </StackPanel>-->
 </Window>
