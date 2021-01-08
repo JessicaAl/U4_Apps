@@ -17,7 +17,7 @@ namespace MemoramaAPIWeb
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient("Pokemones", 
-                configureClient => { configureClient.BaseAddress = new Uri("https://pokeapi.co/api/v2/pokemon?limit=12"); });
+                configureClient => { configureClient.BaseAddress = new Uri("https://pokeapi.co/api/v2/pokemon?limit=6"); });
 
            services.AddMvc();
         }
