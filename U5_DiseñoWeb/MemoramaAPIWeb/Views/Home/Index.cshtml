@@ -7,64 +7,107 @@
         <link href="diseño.css" rel="stylesheet" />
         <title>Memorama</title>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    </head>
-    <body>
-        <main>
-        <h1>PokeMemo</h1>
-        <input type="button" value="Iniciar juego" id="iniciar" />
-        <table>
-            @if (Model.poke1.isSelected==true)
-            {
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="@Model.poke1.Foto" />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                        <td>
-                            <img />
-                        </td>
-                    </tr>
-                </tbody>
+        <script>
+
+            function NumerosAleatorios(min, max) {
+                return Math.round(Math.random() * (max - min) + min);
             }
 
+            var r = NumerosAleatorios(0,12)
+            var imagenes = Array("~/images/1.jpg", "~/images/1.jpg", "~/images/2.jpg", "~/images/2.jpg", "~/images/3.jpg",
+                "~/images/3.jpg", "~/images/4.jpg", "~/images/4.jpg", "~/images/5.jpg", "~/images/5.jpg", "~/images/6.jpg",
+                "~/images/6.jpg");
+        //    var imagenVisible = 0;
 
-        </table>
+            // Función que cambia la imagen actual por la siguiente
+                function cambiar(img)
+                {
 
-        </main>
-    </body>
+                   // imagenVisible++;
+                    //if (imagenVisible >= imagenes.length)
+                    //{
+                    //    r = imagenVisible;
+                    //}
+                    // img.src = imagenes[r];
+                    //var nombre = "~/images/";
+                    //var valor = ".jpg";
+                    //img.src = nombre + r + valor;
+                    img.src = "~/images/2.jpg";
 
-</html>
+                    nuevaImagen();
+                }
+
+                //Esta función carga la siguiente imagen para no tener que esperar su carga en el momento de mostrarla
+                function nuevaImagen()
+                {
+                    if (r < imagenes.length)
+                    {
+                        console.log(r);
+                        var imgTmp = new Image();
+                        imgTmp.src = imagenes[r];
+                    }
+                }
+
+                window.onload = function()
+                {
+                    nuevaImagen();
+                }
+ 
+         </script>
+
+       </head >
+           <body>
+                <main>
+                        <h1>PokeMemo</h1>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                    <td>
+                                        <img src="~/images/reversoCarta.jpg" onclick="cambiar(this)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                    </table>
+
+               </main>
+        </body>
+
+</html >

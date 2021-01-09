@@ -65,10 +65,12 @@ namespace MemoramaAPIWeb.Controllers
 
             for (int i = 0; i <= idsPoke.Length; i++)
             {
-                mvm.poke1.Foto = $"~/images/{idsPoke[i]}.jpg";
-                mvm.poke1.idPoke = idsPoke[i];
-                mvm.poke1.isSelected = false;
-                mvm.poke1.reversoCarta = "~/images/reversoCarta.jpg";
+                mvm.poke.Foto = $"~/images/{idsPoke[i]}.jpg";
+                mvm.poke.idPoke = idsPoke[i];
+                mvm.poke.isSelected = false;
+                mvm.poke.reversoCarta = "~/images/reversoCarta.jpg";
+
+                mvm.ListaPokemones.Add(mvm.poke);
             }
 
 

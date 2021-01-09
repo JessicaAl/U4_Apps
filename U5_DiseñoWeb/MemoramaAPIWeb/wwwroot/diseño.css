@@ -8,10 +8,7 @@
 }
 
 main {
-    position: absolute;
-    top: 5px;
-    overflow: auto;
-    width: 99%;
+    height:100%;
     padding: 5px;
     text-align: center;
 }
@@ -21,11 +18,8 @@ main {
         text-align: center;
     }
 
-    main table {
-        position: absolute;
-        top: 120px;
-        right: 400px;
-        overflow: auto;
+    table {
+        margin-left: 370px;
     }
 
     main table tr td img {
