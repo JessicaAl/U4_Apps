@@ -12,27 +12,24 @@
             function NumerosAleatorios(min, max) {
                 return Math.round(Math.random() * (max - min) + min);
             }
-
+            
             var r = NumerosAleatorios(0,12)
-            var imagenes = Array("~/images/1.jpg", "~/images/1.jpg", "~/images/2.jpg", "~/images/2.jpg", "~/images/3.jpg",
-                "~/images/3.jpg", "~/images/4.jpg", "~/images/4.jpg", "~/images/5.jpg", "~/images/5.jpg", "~/images/6.jpg",
-                "~/images/6.jpg");
-        //    var imagenVisible = 0;
+            var imagenes = Array("images/1.jpg", "images/1.jpg", "images/2.jpg", "images/2.jpg", "images/3.jpg",
+                "images/3.jpg", "images/4.jpg", "images/4.jpg", "images/5.jpg", "images/5.jpg", "images/6.jpg",
+                "images/6.jpg");
+            var imagenVisible = 0;
 
             // Función que cambia la imagen actual por la siguiente
                 function cambiar(img)
                 {
 
-                   // imagenVisible++;
-                    //if (imagenVisible >= imagenes.length)
-                    //{
-                    //    r = imagenVisible;
-                    //}
-                    // img.src = imagenes[r];
-                    //var nombre = "~/images/";
-                    //var valor = ".jpg";
-                    //img.src = nombre + r + valor;
-                    img.src = "~/images/2.jpg";
+                    imagenVisible++;
+                    if (imagenVisible >= imagenes.length)
+                    {
+                        imagenVisible = 0;
+                    }
+                    img.src = imagenes[imagenVisible];
+                    
 
                     nuevaImagen();
                 }
@@ -42,9 +39,9 @@
                 {
                     if (r < imagenes.length)
                     {
-                        console.log(r);
+                        console.log(imagenVisible);
                         var imgTmp = new Image();
-                        imgTmp.src = imagenes[r];
+                        imgTmp.src = imagenes[imagenVisible];
                     }
                 }
 
