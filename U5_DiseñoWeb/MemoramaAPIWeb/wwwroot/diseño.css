@@ -22,6 +22,16 @@ main {
         margin-left: 370px;
     }
 
-    main table tr td img {
-        width: 140px;
+main table tr td img {
+    width: 140px;
+}
+
+    main table tr td img:active 
+    {
+        transition:all .2s ease-in-out;
+        -webkit-transform: rotateY(180deg);
+        -webkit-transform-style: preserve-3d;
+        transform: rotateY(180deg);
+        transform-style: preserve-3d;
+        animation-duration: 3s;
     }
